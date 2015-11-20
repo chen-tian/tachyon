@@ -256,14 +256,21 @@ public final class Constants {
    * This format is used as a template to generate the property name for a given level. e.g.,
    * {@code String.format(Constants.WORKER_TIERED_STORE_LEVEL_RESERVED_RATIO_FORMAT, level)}
    */
-  public static final String WORKER_TIERED_STORE_LEVEL_RESERVED_RATIO_FORMAT =
-      "tachyon.worker.tieredstore.level%d.reserved.ratio";
+  //public static final String WORKER_TIERED_STORE_LEVEL_RESERVED_RATIO_FORMAT =
+  //    "tachyon.worker.tieredstore.level%d.reserved.ratio";
+
+  public static final String  WORKER_TIERED_STORE_LEVEL_HIGH_WATERMARK_RATIO_FORMAT =
+      "tachyon.worker.tieredstore.level%d.high.wartermark.ratio";
+
+  public static final String  WORKER_TIERED_STORE_LEVEL_LOW_WATERMARK_RATIO_FORMAT =
+      "tachyon.worker.tieredstore.level%d.low.wartermark.ratio";
 
   public static final String WORKER_TIERED_STORE_RESERVER_INTERVAL_MS =
       "tachyon.worker.tieredstore.reserver.interval.ms";
 
   public static final String WORKER_TIERED_STORE_RESERVER_ENABLED =
       "tachyon.worker.tieredstore.reserver.enabled";
+      
   public static final String WORKER_KEYTAB_KEY = "tachyon.worker.keytab.file";
   public static final String WORKER_PRINCIPAL_KEY = "tachyon.worker.principal";
   public static final String WORKER_DATA_SERVER = "tachyon.worker.data.server.class";

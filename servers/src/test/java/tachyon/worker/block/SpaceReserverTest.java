@@ -70,11 +70,11 @@ public class SpaceReserverTest {
     BlockDataManager blockDataManager = new BlockDataManager(workerSource, blockMasterClient,
         workerFileSystemMasterClient, mBlockStore);
     String reserveRatioProp =
-        String.format(Constants.WORKER_TIERED_STORE_LEVEL_RESERVED_RATIO_FORMAT, 0);
-    WorkerContext.getConf().set(reserveRatioProp, "0.2");
+        String.format(Constants.WORKER_TIERED_STORE_LEVEL_LOW_WATERMARK_RATIO_FORMAT, 0);
+    WorkerContext.getConf().set(reserveRatioProp, "0.8");
     reserveRatioProp =
-        String.format(Constants.WORKER_TIERED_STORE_LEVEL_RESERVED_RATIO_FORMAT, 1);
-    WorkerContext.getConf().set(reserveRatioProp, "0.3");
+        String.format(Constants.WORKER_TIERED_STORE_LEVEL_LOW_WATERMARK_RATIO_FORMAT, 1);
+    WorkerContext.getConf().set(reserveRatioProp, "0.7");
     mSpaceReserver = new SpaceReserver(blockDataManager);
   }
 
